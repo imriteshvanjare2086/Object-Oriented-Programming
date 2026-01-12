@@ -44,9 +44,5 @@ int main()
     s1.display();
 }
 
-// Ritesh
-// 19
-// IT
-// 149
 
 
