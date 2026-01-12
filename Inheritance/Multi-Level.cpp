@@ -79,16 +79,4 @@ int main()
     c1.displayChild();
 }
 
-// Output :-
 
-// Name: Babulal
-// Age: 75
-// Pension: 12000
-
-// Name: Sanjay
-// Age: 52
-// Salary: 900000
-
-// Name: Ritesh
-// Age: 19
-// Degree: BTech
