@@ -81,7 +81,7 @@ int main()
     Child1 c1("Ritesh", 19, "Male", 10000.0, "Cricket");
     c1.display();
 
-    Child1 c2("Shaizaan", 19, "Male", 20000.0, "Gaming");
+    Child2 c2("Shaizaan", 19, "Male", 20000.0, "Gaming");
     c2.display();
 
     return 0;

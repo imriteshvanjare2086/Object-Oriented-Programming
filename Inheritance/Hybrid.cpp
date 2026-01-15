@@ -51,18 +51,19 @@ public:
     }
 };
 
-class Child2 : public Child1,Parent
+class Child2 : public Parent
 {
 protected:
     string hobby;
 
 public:
-    Child2(string name, int age, string gender, float salary, string hobby) : Child1(name,age,gender,salary,hobby),Parent(name, age, gender, salary)
+    Child2(string name, int age, string gender, float salary, string hobby)
+        : Parent(name, age, gender, salary)
     {
         this->hobby = hobby;
     }
 
-    void display() override
+    void display() 
     {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
@@ -70,6 +71,28 @@ public:
         cout << "Hobby: " << hobby << endl;
         cout << endl;
     }
+};
+
+class GrandChild : public Child2
+{
+protected:
+  string school;
+
+public:
+  GrandChild(string name, int age, string gender, float salary, string hobby,string school) : Child2(name,age,gender,salary,hobby)
+  {
+    this->school = school;
+  }
+
+  void display() 
+  {
+      cout << "Name: " << name << endl;
+      cout << "Age: " << age << endl;
+      cout << "Gender: " << gender << endl;
+      cout << "Hobby: " << hobby << endl;
+      cout << "School Name: " << school << endl;
+      cout << endl;
+  }
 };
 
 int main()
@@ -80,8 +103,11 @@ int main()
     Child1 c1("Ritesh", 19, "Male", 10000.0, "Cricket");
     c1.display();
 
-    Child1 c2("Shaizaan", 19, "Male", 20000.0, "Gaming");
+    Child1 c2("Sahil", 19, "Male", 20000.0, "Gaming");
     c2.display();
+
+    GrandChild g2("Anuj", 19, "Male", 300000.0, "Football", "K.K.Wagh");
+    g2.display();
 
     return 0;
 }
