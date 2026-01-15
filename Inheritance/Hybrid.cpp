@@ -51,19 +51,18 @@ public:
     }
 };
 
-class Child2 : public Parent
+class Child2 : public Child1,Parent
 {
 protected:
     string hobby;
 
 public:
-    Child2(string name, int age, string gender, float salary, string hobby)
-        : Parent(name, age, gender, salary)
+    Child2(string name, int age, string gender, float salary, string hobby) : Child1(name,age,gender,salary,hobby),Parent(name, age, gender, salary)
     {
         this->hobby = hobby;
     }
 
-    void display() 
+    void display() override
     {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
